@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="/css/play.css">
+</head>
+<body>
+    <div id="initUI">
+      <input placeholder="Enter your name" id="nameInput" value="a"<!--placeholder value so we can just hit the search button-->>
+      <button id="buttonNameInput">Search for a match</button>
+    </div>
+    <div class="waitingUI "id="waitingUI">
+        <p class="waitingText" id="waitingText">Waiting for other player...</p>
+      <p id="serverLengthText"></p>  
+    </div>
+        
+    
+    <!--This first div (main) we use to organize everything in the game-->
+    <main id="game">
+        <div id="enemyPlayer" class="enemy">
+          <!--We can use this div to give feedback to the player-->
+          <div id="enemyHand" class="enemyHand">
+             
+          </div>
+          <div id="enemyStatus" class="enemy">
+             
+          </div>
+        </div>
+        
+      <!--The gameboard, where the grid and cards will be-->
+      <div id="board" class="board">
+        <div id="cheap" class="cheap">
+          <div id="cardCheap" class="cardCheap"></div>
+          <div id="cardCheap" class="cardCheap" style="top: -2px"></div>
+<div id="cardCheap" class="cardCheap" style="top: -3.5px"></div>
+<div id="cardCheap" class="cardCheap" style="top: -4.5px"></div>
+<div id="cardCheap" class="cardCheap" style="top: -5.5px">
+</div>
+<div id="cardCheap" class="cardCheap" style="top: -6.5px"></div>
+        </div>
+        <!--Inside of it we define the area for the enemy and player-->
+        <div id="enemyGrid" class="enemy">
+            
+        </div>
+        <div id="midGrid" class="mid">
+        
+            
+        </div>
+        
+        <div id="playerGrid" class="player">
+            
+        </div>
+        
+      </div>
+      <div id="player" class="player">
+        <!--We can use this div to give feedback to the player-->
+        <div id="playerHand" class="playerHand">
+
+        </div>
+        <div id="playerStatus" class="player">
+
+        </div>
+      </div>
+      
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/play/matchSystem.js"></script>
+    <script src="/js/play/gridSystem.js"></script>
+    <script src="/js/play/roundSystem.js"></script>
+    <script src="/js/play/playerHandSystem.js"></script>
+    <script src="/js/play/cardSystem.js"></script>
+</body>
+</html>
